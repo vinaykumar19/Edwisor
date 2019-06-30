@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Multiple conditions in a single if</title>
+</head>
+<body>
+<script>
+var marksObtained=window.prompt('Please enter the marks obtained');
+
+if(marksObtained==undefined || marksObtained== null || marksObtained== " "){
+
+	alert('invalid input')
+}else if(marksObtained<0 || marksObtained>100){
+alert('input a number between 0 to 100')
+}else{
+
+	marksObtained=Number(marksObtained)
+	var totalMarks=100
+	var percentageOfMarksObtained=(marksObtained/totalMarks)*100
+
+	/*if(percentageOfMarksObtained>90){
+       var isTopper=true
+	}else{
+		var isTopper=false
+	}
+	alert(isTopper)*/
+	//Ternary Operators
+	isTopper=(percentageOfMarksObtained>90)?true:false
+alert(isTopper)
+
+}
+
+</script>
+</body>
+</html>

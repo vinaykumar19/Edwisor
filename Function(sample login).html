@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>function(a sample login)</title>
+</head>
+<body>
+<script>
+//A sample login function
+var users=[{
+
+	'email':'someemail@edwisor.com',
+	'password':'somepassword',
+	'firdtName':'aditya',
+	'lastName':'kumar',
+	'mobileNumber':9999999999
+},
+{
+'email':'sid@edwisor.com',
+'password':'someotherpassword',
+'firstName':'sid',
+'lastName':'sharma',
+'mobileNumber':1234567891
+},
+{
+	'email':'vikas@edwisor.com',
+	'password':'thirdpassword',
+	'firstName':'vikas',
+	'lastName':'singh',
+	'mobileNumber':2345678998
+}
+]
+//End users Arrray
+var checkLogin = function(email,password,allUsers){
+	var isUserFound = false
+	var passwordCorrect= false
+for(currentUser in allUsers){
+if(allUsers[currentUser]['email']==email){
+
+if(allUsers[currentUser]['password']==password){
+
+ isUserFound=true
+ passwordCorrect=true
+
+break
+
+}else{
+
+	 isUserFound=true
+	 passwordCorrect=false
+	break
+}
+}else{
+
+	 isUserFound=false
+
+}
+}
+//End for in loop
+if(isUserFound ==true && passwordCorrect ==true){
+alert('You are logged in')
+}else if(isUserFound ==true && passwordCorrect ==false){
+
+alert('You have provided incorrect password')
+}else{
+alert('no user with this email found')
+
+}
+}
+//End check login
+
+var email=prompt('Enter your email')
+var password = prompt('Enter your password')
+checkLogin(email,password,users)
+//End a sample login function
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head></head>
+<body>
+<script>
+//student example(calculating the percentage 0f marks obtained)
+var isTopper = true
+
+var marksObtained = window.prompt('please enter the marks obtained')
+if(marksObtained == undefined || marksObtained == null || marksObtained == ''){
+alert(invaild input)
+}else if(marksObtained <0 || marksObtained >100){
+alert('Input a number between 0 to 100')
+}else{
+//calculating the percent
+marksObtained = Number(marksObtained)//In js,convert anything into number is done like this. 
+var totalMarks = 100
+var percentageOfMarksObtained=(marksObtained/totalMarks)*100
+
+//end calculating the percent
+//we want to perform another check that's why another if else statement is written inside else block
+if(percentageOfMarksObtained >90){
+isTopper = true
+}else{
+isTopper = false
+}
+alert(isTopper)
+}
+//End program 
+</script>
+</body>
+</html>
